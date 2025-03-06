@@ -54,7 +54,7 @@ class BruegelBridge extends BridgeAbstract
     {
         $authorsElements = $article->find('.c-list-item__authors a');
 
-        $authors[] = array_map(function ($author) {
+        $authors = array_map(function ($author) {
             return $author->plaintext;
         }, $authorsElements);
 
