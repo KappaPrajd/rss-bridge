@@ -2,6 +2,9 @@ version: '2'
 services:
   rss-bridge:
     image: rssbridge/rss-bridge:latest
+    build:
+      dockerfile: Dockerfile
+      context: .
     networks:
       - rss_shared_network
     volumes:
